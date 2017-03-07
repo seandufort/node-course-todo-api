@@ -90,7 +90,7 @@ app.patch('/todos/:id', (req, res) => {
     res.send({todo});
   }).catch((e) => {
     res.status(400).send();
-  })
+  });
 });
 
 app.listen(port, () => {
