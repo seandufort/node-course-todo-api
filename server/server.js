@@ -31,6 +31,10 @@ app.get('/todos', (req, res) => {
   }, (e) => {
     res.status(400).send(e);
   })
+  if(process.env.PORT) {
+    console.log(process.env.MONGODB_URI);
+  }
+  console.log(port);
 });
 
 app.get('/todos/:id', (req, res) => {
